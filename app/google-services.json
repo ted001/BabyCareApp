@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "648064178766",
+    "project_id": "babycare-7971c",
+    "storage_bucket": "babycare-7971c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:648064178766:android:85a821ee5d3e4310fa811f",
+        "android_client_info": {
+          "package_name": "edu.neu.babycare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "648064178766-ir1g1p8u72fmdi95kbcft0q93o95n7dn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRwajpqj5Zu-uEo7c5W2wQOOInV6lA7lk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "648064178766-ir1g1p8u72fmdi95kbcft0q93o95n7dn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

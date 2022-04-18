@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".ui.signup.SignUpActivity">
+
+            <TextView
+                android:id="@+id/nameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Your name"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/nameEt"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/nameEt"
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Full name"
+                android:inputType="text"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nameTv" />
+
+            <TextView
+                android:id="@+id/relationTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your relationship with the baby"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/relationSpinner"
+                app:layout_constraintTop_toBottomOf="@+id/nameEt" />
+
+            <Spinner
+                android:id="@+id/relationSpinner"
+                android:layout_width="380dp"
+                android:layout_height="40dp"
+                android:entries="@array/relationship"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/relationTv" />
+
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="Got a family code"
+                app:layout_constraintStart_toStartOf="@+id/nameEt"
+                app:layout_constraintTop_toBottomOf="@+id/relationSpinner" />
+
+            <EditText
+                android:id="@+id/familyCodeEt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="8"
+                android:hint="Family Code"
+                android:inputType="text"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/checkBox"
+                app:layout_constraintEnd_toEndOf="@+id/nameEt"
+                app:layout_constraintTop_toTopOf="@+id/checkBox" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/babyInfoLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkBox">
+
+
+                <TextView
+                    android:id="@+id/babyName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Baby's name"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/babyNameEt"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/babyNameEt"
+                    android:layout_width="380dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Full name"
+                    android:inputType="text"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/babyName" />
+
+                <TextView
+                    android:id="@+id/babyGender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Gender"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/babyNameEt"
+                    app:layout_constraintTop_toBottomOf="@+id/babyNameEt" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupGender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="@+id/babyGender"
+                    app:layout_constraintTop_toBottomOf="@+id/babyGender">
+
+                    <RadioButton
+                        android:id="@+id/boy"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_radio_button"
+                        android:button="@null"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:text="Boy"
+                        android:textSize="24sp" />
+
+                    <RadioButton
+                        android:id="@+id/girl"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:background="@drawable/bg_radio_button"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="Girl"
+                        android:textSize="24sp" />
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/babyBirthday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Baby's Birthday"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/radioGroupGender"
+                    app:layout_constraintTop_toBottomOf="@+id/radioGroupGender" />
+
+                <DatePicker
+                    android:id="@+id/datePicker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:calendarViewShown="false"
+                    android:datePickerMode="spinner"
+                    app:layout_constraintStart_toStartOf="@+id/babyBirthday"
+                    app:layout_constraintTop_toBottomOf="@+id/babyBirthday" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/signup"
+        android:layout_width="380dp"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#0ED6B9"
+        android:onClick="signUp"
+        android:text="Sign Up"
+        android:textColor="#ffffff"
+        android:textSize="26sp" />
+</RelativeLayout>

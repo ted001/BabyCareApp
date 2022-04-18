@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="relationship">
+        <item>Mother</item>
+        <item>Father</item>
+        <item>Family Member</item>
+        <item>Other Caregivers</item>
+    </string-array>
+</resources>
