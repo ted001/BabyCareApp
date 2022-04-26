@@ -48,3 +48,8 @@ a. finalize on design details.
 Will meet again on 4.19 4:30 pm to sync status, Demonstrate and explain current code
 
 4/19meeting with the group
+Result: Sync with TA
+1. Discuss whether we can use filebase storage to upload photos
+2. Discuss some ideas about feature
+a. message center
+b. reward system
