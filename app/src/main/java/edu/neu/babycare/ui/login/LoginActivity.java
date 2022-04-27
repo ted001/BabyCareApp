@@ -20,6 +20,7 @@ import edu.neu.babycare.MainActivity;
 import edu.neu.babycare.R;
 import edu.neu.babycare.model.User;
 import edu.neu.babycare.ui.signup.SignUpActivity;
+import edu.neu.babycare.ui.training.TrainingCenterActivity;
 
 public class LoginActivity extends AppCompatActivity {
     private static final String TAG = LoginActivity.class.getSimpleName();
@@ -67,7 +68,7 @@ public class LoginActivity extends AppCompatActivity {
                     for (DataSnapshot postSnapshot : snapshot.getChildren()) {
                         String userName = postSnapshot.getValue(User.class).userName;
                         if (userName.equals(loginUserName)) {
-                            startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                            startActivity(new Intent(LoginActivity.this, TrainingCenterActivity.class));
                             LoginActivity.this.finish();
                             return;
                         }

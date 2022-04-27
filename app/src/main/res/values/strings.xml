@@ -1,3 +1,26 @@
 <resources>
     <string name="app_name">BabyCare</string>
+    <string name="parenting_suggestion">
+        1、Learning nursing skills to keep your baby comfortable and secure\n
+        2、Doing touch every day, increasing physical contact to let your baby feel love\n
+        3、Providing rich sensory stimulation and promoting the development of vision and hearing
+    </string>
+    <string name="video_description1">
+        Prep: Body Oil\nCore: Touching your baby can promote her physical development, improve her sense of security, and be good for her physical and mental health.
+        It is recommended to do it before bathing or going to bed. Babies who are just trying to touch can do it for 5 minutes at first. If you like, you can repeat it, and gradually increase it to about 20 minutes.
+    </string>
+    <string name="video_description2">
+        Introduce baby bathing tips to make bathing easier.
+        The first tip is to prepare for the bath, such as adjusting the room temperature to 26 degrees,
+        preparing bath products, and testing the water temperature.
+        The second tip is to wash your baby\'s hair alone before bathing.
+        which can prevents water from entering eyes and ears, reducing discomfort.
+        The third tip is to let your baby get in touch with the water gradually,
+        to get used to the water temperature in advance, so that she/he will be more comfortable in the bath.
+    </string>
+    <string name="video_description3">
+        Newborn babies urinate a lot, and diapers should be changed frequently to avoid irritation to the skin.
+        How to properly help your baby change diapers and how to avoid diapers rubbing against the umbilical cord are all important, come and learn.
+    </string>
+
 </resources>

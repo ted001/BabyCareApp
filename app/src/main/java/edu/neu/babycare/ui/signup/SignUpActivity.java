@@ -33,6 +33,7 @@ import edu.neu.babycare.R;
 import edu.neu.babycare.model.Baby;
 import edu.neu.babycare.model.User;
 import edu.neu.babycare.ui.login.LoginActivity;
+import edu.neu.babycare.ui.training.TrainingCenterActivity;
 
 public class SignUpActivity extends AppCompatActivity {
     private static final String TAG = SignUpActivity.class.getSimpleName();
@@ -134,6 +135,7 @@ public class SignUpActivity extends AppCompatActivity {
 
             }
         });
+        familyCodeCb.setChecked(true);
     }
 
     public void signUp(View view) {
@@ -167,7 +169,7 @@ public class SignUpActivity extends AppCompatActivity {
                                     //mDbFamilyCodeRef.child("1111").child(userName).setValue(userName);
                                     //User user = new User(userName, babyName, relationship, babyBirthday);
                                     //Task t = mDbUsersRef.child(user.getUserName()).setValue(user);
-                                    startActivity(new Intent(SignUpActivity.this, MainActivity.class));
+                                    startActivity(new Intent(SignUpActivity.this, TrainingCenterActivity.class));
                                     SignUpActivity.this.finish();
                                     return;
                                 }
@@ -207,7 +209,7 @@ public class SignUpActivity extends AppCompatActivity {
                         mDbFamilyCodeRef.child("1111").child(babyName).setValue(baby);
                         MyApplication.getInstance().setLoginUserName(userName);
                         Intent intent = new Intent();
-                        intent.setClass(SignUpActivity.this, MainActivity.class);
+                        intent.setClass(SignUpActivity.this, TrainingCenterActivity.class);
                         startActivity(intent);
                         SignUpActivity.this.finish();
                     }
