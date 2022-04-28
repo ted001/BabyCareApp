@@ -1,5 +1,4 @@
 package edu.neu.babycare.model;
-
 public class Baby {
     public String babyName;
     public String babyBirthday;
