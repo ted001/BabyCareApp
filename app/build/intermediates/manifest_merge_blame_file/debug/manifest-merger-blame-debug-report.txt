@@ -1,0 +1,193 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="edu.neu.babycare"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="26"
+8-->C:\Users\miash\AndroidStudioProjects\babyCareApp\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="31" />
+9-->C:\Users\miash\AndroidStudioProjects\babyCareApp\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->C:\Users\miash\AndroidStudioProjects\babyCareApp\app\src\main\AndroidManifest.xml:4:5-67
+11-->C:\Users\miash\AndroidStudioProjects\babyCareApp\app\src\main\AndroidManifest.xml:4:22-64
+12    <!-- 往SDCard写入数据权限 -->
+13    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+13-->C:\Users\miash\AndroidStudioProjects\babyCareApp\app\src\main\AndroidManifest.xml:45:5-80
+13-->C:\Users\miash\AndroidStudioProjects\babyCareApp\app\src\main\AndroidManifest.xml:45:22-78
+14    <!-- 从SDCard读取数据权限 -->
+15    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+15-->C:\Users\miash\AndroidStudioProjects\babyCareApp\app\src\main\AndroidManifest.xml:47:5-79
+15-->C:\Users\miash\AndroidStudioProjects\babyCareApp\app\src\main\AndroidManifest.xml:47:22-77
+16
+17    <uses-feature android:name="android.hardware.camera" />
+17-->C:\Users\miash\AndroidStudioProjects\babyCareApp\app\src\main\AndroidManifest.xml:48:5-59
+17-->C:\Users\miash\AndroidStudioProjects\babyCareApp\app\src\main\AndroidManifest.xml:48:19-57
+18
+19    <uses-permission android:name="android.permission.CAMERA" />
+19-->C:\Users\miash\AndroidStudioProjects\babyCareApp\app\src\main\AndroidManifest.xml:49:5-64
+19-->C:\Users\miash\AndroidStudioProjects\babyCareApp\app\src\main\AndroidManifest.xml:49:22-62
+20    <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+21    <!-- <uses-sdk android:minSdkVersion="14"/> -->
+22    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+22-->[com.google.firebase:firebase-database:20.0.4] C:\Users\miash\.gradle\caches\transforms-3\bc21d98e0e81a37e3bb2df404e9e11ec\transformed\jetified-firebase-database-20.0.4\AndroidManifest.xml:25:5-79
+22-->[com.google.firebase:firebase-database:20.0.4] C:\Users\miash\.gradle\caches\transforms-3\bc21d98e0e81a37e3bb2df404e9e11ec\transformed\jetified-firebase-database-20.0.4\AndroidManifest.xml:25:22-76
+23
+24    <application
+24-->C:\Users\miash\AndroidStudioProjects\babyCareApp\app\src\main\AndroidManifest.xml:5:5-43:19
+25        android:name="edu.neu.babycare.MyApplication"
+25-->C:\Users\miash\AndroidStudioProjects\babyCareApp\app\src\main\AndroidManifest.xml:6:9-38
+26        android:allowBackup="true"
+26-->C:\Users\miash\AndroidStudioProjects\babyCareApp\app\src\main\AndroidManifest.xml:7:9-35
+27        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+27-->[androidx.core:core:1.7.0] C:\Users\miash\.gradle\caches\transforms-3\8fff248dbe0397cca10a959cecdafd82\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
+28        android:debuggable="true"
+29        android:extractNativeLibs="false"
+30        android:icon="@mipmap/ic_launcher"
+30-->C:\Users\miash\AndroidStudioProjects\babyCareApp\app\src\main\AndroidManifest.xml:8:9-43
+31        android:label="@string/app_name"
+31-->C:\Users\miash\AndroidStudioProjects\babyCareApp\app\src\main\AndroidManifest.xml:9:9-41
+32        android:roundIcon="@mipmap/ic_launcher_round"
+32-->C:\Users\miash\AndroidStudioProjects\babyCareApp\app\src\main\AndroidManifest.xml:10:9-54
+33        android:screenOrientation="portrait"
+33-->C:\Users\miash\AndroidStudioProjects\babyCareApp\app\src\main\AndroidManifest.xml:12:9-45
+34        android:supportsRtl="true"
+34-->C:\Users\miash\AndroidStudioProjects\babyCareApp\app\src\main\AndroidManifest.xml:11:9-35
+35        android:testOnly="true"
+36        android:theme="@style/Theme.BabyCare" >
+36-->C:\Users\miash\AndroidStudioProjects\babyCareApp\app\src\main\AndroidManifest.xml:13:9-46
+37        <activity
+37-->C:\Users\miash\AndroidStudioProjects\babyCareApp\app\src\main\AndroidManifest.xml:14:9-23:20
+38            android:name="edu.neu.babycare.ui.login.LoginActivity"
+38-->C:\Users\miash\AndroidStudioProjects\babyCareApp\app\src\main\AndroidManifest.xml:15:13-51
+39            android:exported="true"
+39-->C:\Users\miash\AndroidStudioProjects\babyCareApp\app\src\main\AndroidManifest.xml:16:13-36
+40            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+40-->C:\Users\miash\AndroidStudioProjects\babyCareApp\app\src\main\AndroidManifest.xml:17:13-69
+41            <intent-filter>
+41-->C:\Users\miash\AndroidStudioProjects\babyCareApp\app\src\main\AndroidManifest.xml:18:13-22:29
+42                <action android:name="android.intent.action.MAIN" />
+42-->C:\Users\miash\AndroidStudioProjects\babyCareApp\app\src\main\AndroidManifest.xml:19:17-69
+42-->C:\Users\miash\AndroidStudioProjects\babyCareApp\app\src\main\AndroidManifest.xml:19:25-66
+43
+44                <category android:name="android.intent.category.LAUNCHER" />
+44-->C:\Users\miash\AndroidStudioProjects\babyCareApp\app\src\main\AndroidManifest.xml:21:17-77
+44-->C:\Users\miash\AndroidStudioProjects\babyCareApp\app\src\main\AndroidManifest.xml:21:27-74
+45            </intent-filter>
+46        </activity>
+47        <activity android:name="edu.neu.babycare.MainActivity" />
+47-->C:\Users\miash\AndroidStudioProjects\babyCareApp\app\src\main\AndroidManifest.xml:24:9-50
+47-->C:\Users\miash\AndroidStudioProjects\babyCareApp\app\src\main\AndroidManifest.xml:24:19-47
+48        <activity
+48-->C:\Users\miash\AndroidStudioProjects\babyCareApp\app\src\main\AndroidManifest.xml:25:9-27:72
+49            android:name="edu.neu.babycare.ui.signup.SignUpActivity"
+49-->C:\Users\miash\AndroidStudioProjects\babyCareApp\app\src\main\AndroidManifest.xml:26:13-53
+50            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+50-->C:\Users\miash\AndroidStudioProjects\babyCareApp\app\src\main\AndroidManifest.xml:27:13-69
+51        <activity android:name="edu.neu.babycare.ui.training.TrainingCenterActivity" />
+51-->C:\Users\miash\AndroidStudioProjects\babyCareApp\app\src\main\AndroidManifest.xml:28:9-72
+51-->C:\Users\miash\AndroidStudioProjects\babyCareApp\app\src\main\AndroidManifest.xml:28:19-69
+52        <activity android:name="edu.neu.babycare.ui.training.TrainingByMonthActivity" />
+52-->C:\Users\miash\AndroidStudioProjects\babyCareApp\app\src\main\AndroidManifest.xml:29:9-73
+52-->C:\Users\miash\AndroidStudioProjects\babyCareApp\app\src\main\AndroidManifest.xml:29:19-70
+53        <activity
+53-->C:\Users\miash\AndroidStudioProjects\babyCareApp\app\src\main\AndroidManifest.xml:30:9-31:72
+54            android:name="edu.neu.babycare.ui.training.VideoPlayActivity"
+54-->C:\Users\miash\AndroidStudioProjects\babyCareApp\app\src\main\AndroidManifest.xml:30:19-64
+55            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+55-->C:\Users\miash\AndroidStudioProjects\babyCareApp\app\src\main\AndroidManifest.xml:31:13-69
+56        <activity
+56-->C:\Users\miash\AndroidStudioProjects\babyCareApp\app\src\main\AndroidManifest.xml:32:9-40:20
+57            android:name="edu.neu.babycare.photo"
+57-->C:\Users\miash\AndroidStudioProjects\babyCareApp\app\src\main\AndroidManifest.xml:33:13-34
+58            android:exported="true" >
+58-->C:\Users\miash\AndroidStudioProjects\babyCareApp\app\src\main\AndroidManifest.xml:34:13-36
+59            <intent-filter>
+59-->C:\Users\miash\AndroidStudioProjects\babyCareApp\app\src\main\AndroidManifest.xml:18:13-22:29
+60                <action android:name="android.intent.action.MAIN" />
+60-->C:\Users\miash\AndroidStudioProjects\babyCareApp\app\src\main\AndroidManifest.xml:19:17-69
+60-->C:\Users\miash\AndroidStudioProjects\babyCareApp\app\src\main\AndroidManifest.xml:19:25-66
+61
+62                <category android:name="android.intent.category.LAUNCHER" />
+62-->C:\Users\miash\AndroidStudioProjects\babyCareApp\app\src\main\AndroidManifest.xml:21:17-77
+62-->C:\Users\miash\AndroidStudioProjects\babyCareApp\app\src\main\AndroidManifest.xml:21:27-74
+63            </intent-filter>
+64        </activity>
+65        <activity
+65-->C:\Users\miash\AndroidStudioProjects\babyCareApp\app\src\main\AndroidManifest.xml:41:9-42:60
+66            android:name="edu.neu.babycare.ImageDetail"
+66-->C:\Users\miash\AndroidStudioProjects\babyCareApp\app\src\main\AndroidManifest.xml:41:19-46
+67            android:theme="@style/Theme.AppCompat.Dialog" />
+67-->C:\Users\miash\AndroidStudioProjects\babyCareApp\app\src\main\AndroidManifest.xml:42:13-58
+68
+69        <service
+69-->[com.google.firebase:firebase-database:20.0.4] C:\Users\miash\.gradle\caches\transforms-3\bc21d98e0e81a37e3bb2df404e9e11ec\transformed\jetified-firebase-database-20.0.4\AndroidManifest.xml:29:9-35:19
+70            android:name="com.google.firebase.components.ComponentDiscoveryService"
+70-->[com.google.firebase:firebase-database:20.0.4] C:\Users\miash\.gradle\caches\transforms-3\bc21d98e0e81a37e3bb2df404e9e11ec\transformed\jetified-firebase-database-20.0.4\AndroidManifest.xml:30:13-84
+71            android:directBootAware="true"
+71-->[com.google.firebase:firebase-common:20.1.0] C:\Users\miash\.gradle\caches\transforms-3\25d7406613836544b3de6e8507544e58\transformed\jetified-firebase-common-20.1.0\AndroidManifest.xml:35:13-43
+72            android:exported="false" >
+72-->[com.google.firebase:firebase-database:20.0.4] C:\Users\miash\.gradle\caches\transforms-3\bc21d98e0e81a37e3bb2df404e9e11ec\transformed\jetified-firebase-database-20.0.4\AndroidManifest.xml:31:13-37
+73            <meta-data
+73-->[com.google.firebase:firebase-database:20.0.4] C:\Users\miash\.gradle\caches\transforms-3\bc21d98e0e81a37e3bb2df404e9e11ec\transformed\jetified-firebase-database-20.0.4\AndroidManifest.xml:32:13-34:85
+74                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+74-->[com.google.firebase:firebase-database:20.0.4] C:\Users\miash\.gradle\caches\transforms-3\bc21d98e0e81a37e3bb2df404e9e11ec\transformed\jetified-firebase-database-20.0.4\AndroidManifest.xml:33:17-109
+75                android:value="com.google.firebase.components.ComponentRegistrar" />
+75-->[com.google.firebase:firebase-database:20.0.4] C:\Users\miash\.gradle\caches\transforms-3\bc21d98e0e81a37e3bb2df404e9e11ec\transformed\jetified-firebase-database-20.0.4\AndroidManifest.xml:34:17-82
+76        </service>
+77
+78        <provider
+78-->[com.google.firebase:firebase-common:20.1.0] C:\Users\miash\.gradle\caches\transforms-3\25d7406613836544b3de6e8507544e58\transformed\jetified-firebase-common-20.1.0\AndroidManifest.xml:26:9-31:39
+79            android:name="com.google.firebase.provider.FirebaseInitProvider"
+79-->[com.google.firebase:firebase-common:20.1.0] C:\Users\miash\.gradle\caches\transforms-3\25d7406613836544b3de6e8507544e58\transformed\jetified-firebase-common-20.1.0\AndroidManifest.xml:27:13-77
+80            android:authorities="edu.neu.babycare.firebaseinitprovider"
+80-->[com.google.firebase:firebase-common:20.1.0] C:\Users\miash\.gradle\caches\transforms-3\25d7406613836544b3de6e8507544e58\transformed\jetified-firebase-common-20.1.0\AndroidManifest.xml:28:13-72
+81            android:directBootAware="true"
+81-->[com.google.firebase:firebase-common:20.1.0] C:\Users\miash\.gradle\caches\transforms-3\25d7406613836544b3de6e8507544e58\transformed\jetified-firebase-common-20.1.0\AndroidManifest.xml:29:13-43
+82            android:exported="false"
+82-->[com.google.firebase:firebase-common:20.1.0] C:\Users\miash\.gradle\caches\transforms-3\25d7406613836544b3de6e8507544e58\transformed\jetified-firebase-common-20.1.0\AndroidManifest.xml:30:13-37
+83            android:initOrder="100" />
+83-->[com.google.firebase:firebase-common:20.1.0] C:\Users\miash\.gradle\caches\transforms-3\25d7406613836544b3de6e8507544e58\transformed\jetified-firebase-common-20.1.0\AndroidManifest.xml:31:13-36
+84
+85        <activity
+85-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\miash\.gradle\caches\transforms-3\d98319f7b7726cf12a32e24850696daa\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+86            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+86-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\miash\.gradle\caches\transforms-3\d98319f7b7726cf12a32e24850696daa\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+87            android:exported="false"
+87-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\miash\.gradle\caches\transforms-3\d98319f7b7726cf12a32e24850696daa\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+88            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+88-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\miash\.gradle\caches\transforms-3\d98319f7b7726cf12a32e24850696daa\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+89
+90        <meta-data
+90-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\miash\.gradle\caches\transforms-3\d90cdb58c1d76d5627b1a46b3fa36cf9\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:21:9-23:69
+91            android:name="com.google.android.gms.version"
+91-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\miash\.gradle\caches\transforms-3\d90cdb58c1d76d5627b1a46b3fa36cf9\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:22:13-58
+92            android:value="@integer/google_play_services_version" />
+92-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\miash\.gradle\caches\transforms-3\d90cdb58c1d76d5627b1a46b3fa36cf9\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:23:13-66
+93
+94        <provider
+94-->[androidx.emoji2:emoji2:1.0.0] C:\Users\miash\.gradle\caches\transforms-3\b2af1edf84156eeeb2fa5bf18dab98cc\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
+95            android:name="androidx.startup.InitializationProvider"
+95-->[androidx.emoji2:emoji2:1.0.0] C:\Users\miash\.gradle\caches\transforms-3\b2af1edf84156eeeb2fa5bf18dab98cc\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:27:13-67
+96            android:authorities="edu.neu.babycare.androidx-startup"
+96-->[androidx.emoji2:emoji2:1.0.0] C:\Users\miash\.gradle\caches\transforms-3\b2af1edf84156eeeb2fa5bf18dab98cc\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:28:13-68
+97            android:exported="false" >
+97-->[androidx.emoji2:emoji2:1.0.0] C:\Users\miash\.gradle\caches\transforms-3\b2af1edf84156eeeb2fa5bf18dab98cc\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:29:13-37
+98            <meta-data
+98-->[androidx.emoji2:emoji2:1.0.0] C:\Users\miash\.gradle\caches\transforms-3\b2af1edf84156eeeb2fa5bf18dab98cc\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
+99                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+99-->[androidx.emoji2:emoji2:1.0.0] C:\Users\miash\.gradle\caches\transforms-3\b2af1edf84156eeeb2fa5bf18dab98cc\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:32:17-75
+100                android:value="androidx.startup" />
+100-->[androidx.emoji2:emoji2:1.0.0] C:\Users\miash\.gradle\caches\transforms-3\b2af1edf84156eeeb2fa5bf18dab98cc\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:33:17-49
+101            <meta-data
+101-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\miash\.gradle\caches\transforms-3\beb33912b30d23b4d0ccfbce77f07f56\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
+102                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+102-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\miash\.gradle\caches\transforms-3\beb33912b30d23b4d0ccfbce77f07f56\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
+103                android:value="androidx.startup" />
+103-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\miash\.gradle\caches\transforms-3\beb33912b30d23b4d0ccfbce77f07f56\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
+104        </provider>
+105    </application>
+106
+107</manifest>

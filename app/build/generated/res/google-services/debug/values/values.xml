@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">648064178766-ir1g1p8u72fmdi95kbcft0q93o95n7dn.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">648064178766</string>
+    <string name="google_api_key" translatable="false">AIzaSyCRwajpqj5Zu-uEo7c5W2wQOOInV6lA7lk</string>
+    <string name="google_app_id" translatable="false">1:648064178766:android:85a821ee5d3e4310fa811f</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCRwajpqj5Zu-uEo7c5W2wQOOInV6lA7lk</string>
+    <string name="google_storage_bucket" translatable="false">babycare-7971c.appspot.com</string>
+    <string name="project_id" translatable="false">babycare-7971c</string>
+</resources>
