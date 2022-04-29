@@ -3,6 +3,10 @@
     <string-array name="relationship">
         <item>Mother</item>
         <item>Father</item>
+        <item>Grandpa</item>
+        <item>Grandma</item>
+        <item>Aunt</item>
+        <item>Uncle</item>
         <item>Family Member</item>
         <item>Other Caregivers</item>
     </string-array>

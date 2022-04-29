@@ -32,6 +32,7 @@ import edu.neu.babycare.MyApplication;
 import edu.neu.babycare.R;
 import edu.neu.babycare.model.Baby;
 import edu.neu.babycare.model.User;
+import edu.neu.babycare.ui.family.FamilyActivity;
 import edu.neu.babycare.ui.login.LoginActivity;
 import edu.neu.babycare.ui.training.TrainingCenterActivity;
 
@@ -166,10 +167,10 @@ public class SignUpActivity extends AppCompatActivity {
                                     //Baby baby = postSnapshot.getValue(Baby.class);
                                     User user = new User(userName, relationship, familyCode);
                                     mDbUsersRef.child(user.getUserName()).setValue(user);
-                                    //mDbFamilyCodeRef.child("1111").child(userName).setValue(userName);
+                                    mDbFamilyCodeRef.child("1111").child("family").child(userName).setValue(user);
                                     //User user = new User(userName, babyName, relationship, babyBirthday);
                                     //Task t = mDbUsersRef.child(user.getUserName()).setValue(user);
-                                    startActivity(new Intent(SignUpActivity.this, TrainingCenterActivity.class));
+                                    startActivity(new Intent(SignUpActivity.this, MainActivity.class));
                                     SignUpActivity.this.finish();
                                     return;
                                 }
@@ -205,11 +206,11 @@ public class SignUpActivity extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(),
                                 "Unable to login, Please check the network connection", Toast.LENGTH_SHORT).show();
                     } else {
-                        //mDbFamilyCodeRef.child("1111").child(userName).setValue(userName);
+                        mDbFamilyCodeRef.child("1111").child("family").child(userName).setValue(user);
                         mDbFamilyCodeRef.child("1111").child(babyName).setValue(baby);
                         MyApplication.getInstance().setLoginUserName(userName);
                         Intent intent = new Intent();
-                        intent.setClass(SignUpActivity.this, TrainingCenterActivity.class);
+                        intent.setClass(SignUpActivity.this, MainActivity.class);
                         startActivity(intent);
                         SignUpActivity.this.finish();
                     }
