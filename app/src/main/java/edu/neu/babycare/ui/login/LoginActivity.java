@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -17,10 +18,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import edu.neu.babycare.MainActivity;
-import edu.neu.babycare.MyApplication;
 import edu.neu.babycare.R;
 import edu.neu.babycare.model.User;
-import edu.neu.babycare.ui.family.FamilyActivity;
+import edu.neu.babycare.photo;
 import edu.neu.babycare.ui.signup.SignUpActivity;
 import edu.neu.babycare.ui.training.TrainingCenterActivity;
 
@@ -41,6 +41,15 @@ public class LoginActivity extends AppCompatActivity {
         mFirebaseDb = FirebaseDatabase.getInstance();
         mDbUsersRef = mFirebaseDb.getReference("Users");
 
+        Button bt_1 = (Button) findViewById(R.id.button2);
+
+        bt_1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                startActivity(new Intent(LoginActivity.this, photo.class));
+            }
+        });
+
     }
 
     private void initView() {
@@ -49,7 +58,7 @@ public class LoginActivity extends AppCompatActivity {
 
     public void signUp(View view) {
         Intent intent = new Intent();
-        intent.setClass(LoginActivity.this, MainActivity.class);
+        intent.setClass(LoginActivity.this, SignUpActivity.class);
         startActivity(intent);
     }
 
@@ -70,8 +79,7 @@ public class LoginActivity extends AppCompatActivity {
                     for (DataSnapshot postSnapshot : snapshot.getChildren()) {
                         String userName = postSnapshot.getValue(User.class).userName;
                         if (userName.equals(loginUserName)) {
-                            MyApplication.getInstance().setLoginUserName(userName);
-                            startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                            startActivity(new Intent(LoginActivity.this, TrainingCenterActivity.class));
                             LoginActivity.this.finish();
                             return;
                         }
