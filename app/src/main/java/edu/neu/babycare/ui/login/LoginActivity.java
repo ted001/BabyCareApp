@@ -18,6 +18,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import edu.neu.babycare.MainActivity;
+import edu.neu.babycare.MyApplication;
 import edu.neu.babycare.R;
 import edu.neu.babycare.model.User;
 import edu.neu.babycare.photo;
@@ -79,7 +80,8 @@ public class LoginActivity extends AppCompatActivity {
                     for (DataSnapshot postSnapshot : snapshot.getChildren()) {
                         String userName = postSnapshot.getValue(User.class).userName;
                         if (userName.equals(loginUserName)) {
-                            startActivity(new Intent(LoginActivity.this, TrainingCenterActivity.class));
+                            MyApplication.getInstance().setLoginUserName(userName);
+                            startActivity(new Intent(LoginActivity.this, MainActivity.class));
                             LoginActivity.this.finish();
                             return;
                         }

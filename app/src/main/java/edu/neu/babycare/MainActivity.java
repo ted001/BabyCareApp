@@ -13,7 +13,11 @@ import android.widget.TextView;
 
 import com.google.android.material.navigation.NavigationBarView;
 
+import edu.neu.babycare.ui.family.FamilyActivity;
+import edu.neu.babycare.ui.training.TrainingCenterActivity;
+
 public class MainActivity extends AppCompatActivity {
+    NavigationBarView bottomNavigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,33 +28,35 @@ public class MainActivity extends AppCompatActivity {
 
         bt_1.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
+            public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, photo.class));
             }
         });
 
         //Initialize and assign variable
 //        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
-        NavigationBarView bottomNavigationView = findViewById(R.id.bottom_navigation);
+        bottomNavigationView = findViewById(R.id.bottom_navigation);
         //Set home
         bottomNavigationView.setSelectedItemId(R.id.home);
 
-        //Perform itemSelectedList
-        bottomNavigationView.setOnItemReselectedListener(new NavigationBarView.OnItemReselectedListener() {
+        bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
-            public void onNavigationItemReselected(@NonNull MenuItem item) {
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.training_center:
-                        startActivity(new Intent(getApplicationContext(), TrainingCenter1.class));
+                        startActivity(new Intent(getApplicationContext(), TrainingCenterActivity.class));
                         overridePendingTransition(0, 0);
-                        return;
+                        break;
                     case R.id.home:
-                        return;
-                    case R.id.messages:
-                        startActivity(new Intent(getApplicationContext(), Messages.class));
+                        break;
+                    case R.id.family:
+                        startActivity(new Intent(getApplicationContext(), FamilyActivity.class));
                         overridePendingTransition(0, 0);
-                        return;
+                        break;
+                    default:
+                        break;
                 }
+                return true;
             }
         });
 
@@ -113,5 +119,11 @@ public class MainActivity extends AppCompatActivity {
     public void openActivityAlbum() {
         Intent intentAlbum = new Intent(this, Album.class);
         startActivity(intentAlbum);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        bottomNavigationView.setSelectedItemId(R.id.home);
     }
 }

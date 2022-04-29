@@ -12,8 +12,8 @@
         android:icon="@drawable/ic_home"/>
 
     <item
-        android:id="@+id/messages"
-        android:title="Messages"
+        android:id="@+id/family"
+        android:title="Family"
         android:icon="@drawable/ic_message"/>
 
 </menu>
