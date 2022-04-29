@@ -6,50 +6,89 @@
     android:layout_height="match_parent"
     tools:context=".DailyMission">
 
-    <TextView
-        android:id="@+id/textView"
+    <CheckBox
+        android:id="@+id/checkbox_mission1"
         android:layout_width="350dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="16dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="50dp"
         android:background="@drawable/box"
+        android:onClick="onCheckboxClicked"
         android:text="Let the Baby Do Prone Training Approprietly"
-        android:textAlignment="center"
-        android:textSize="20dp"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView2"
+    <CheckBox
+        android:id="@+id/checkbox_mission2"
         android:layout_width="350dp"
-        android:layout_height="150dp"
+        android:layout_height="100dp"
         android:layout_marginTop="50dp"
+        android:background="@drawable/box"
+        android:onClick="onCheckboxClicked"
         android:text="Recording Baby's Growth"
-        android:textAlignment="center"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        android:background="@drawable/box"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/checkbox_mission1" />
 
-    <TextView
-        android:id="@+id/textView3"
+    <CheckBox
+        android:id="@+id/checkbox_mission3"
         android:layout_width="350dp"
-        android:layout_height="150dp"
+        android:layout_height="100dp"
         android:layout_marginTop="50dp"
-        android:text="Keep Breast-feeding"
-        android:textAlignment="center"
-        android:textSize="20dp"
-        android:textStyle="bold"
         android:background="@drawable/box"
+        android:onClick="onCheckboxClicked"
+        android:text="Keep Breast-feeding"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/checkbox_mission2" />
+
+    <!--    <TextView-->
+<!--        android:id="@+id/textView"-->
+<!--        android:layout_width="350dp"-->
+<!--        android:layout_height="150dp"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:background="@drawable/box"-->
+<!--        android:text="Let the Baby Do Prone Training Approprietly"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textSize="20dp"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.491"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView2"-->
+<!--        android:layout_width="350dp"-->
+<!--        android:layout_height="150dp"-->
+<!--        android:layout_marginTop="50dp"-->
+<!--        android:text="Recording Baby's Growth"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textSize="20dp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:background="@drawable/box"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.491"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textView" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView3"-->
+<!--        android:layout_width="350dp"-->
+<!--        android:layout_height="150dp"-->
+<!--        android:layout_marginTop="50dp"-->
+<!--        android:text="Keep Breast-feeding"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textSize="20dp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:background="@drawable/box"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.491"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textView2" />-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
