@@ -24,14 +24,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button bt_1 = (Button) findViewById(R.id.button1);
-
-        bt_1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, photo.class));
-            }
-        });
 
         //Initialize and assign variable
 //        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
@@ -76,13 +68,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        ImageButton btnFeedingHistory = (ImageButton) findViewById(R.id.feeding_history);
-        btnFeedingHistory.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openActivityFeedingHistory();
-            }
-        });
+//        ImageButton btnFeedingHistory = (ImageButton) findViewById(R.id.feeding_history);
+//        btnFeedingHistory.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                openActivityFeedingHistory();
+//            }
+//        });
 
         ImageButton btnWeightNHeight = (ImageButton) findViewById(R.id.weight_length);
         btnWeightNHeight.setOnClickListener(new View.OnClickListener() {
@@ -117,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openActivityAlbum() {
-        Intent intentAlbum = new Intent(this, Album.class);
+        Intent intentAlbum = new Intent(this, photo.class);
         startActivity(intentAlbum);
     }
 
