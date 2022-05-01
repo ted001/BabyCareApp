@@ -27,14 +27,17 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.StorageTask;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import edu.neu.babycare.MyApplication;
 import edu.neu.babycare.R;
@@ -57,6 +60,7 @@ public class ChatActivity extends AppCompatActivity {
     private String checker = "", myUrl = "";
     private StorageTask uploadTask;
     private Uri fileUri;
+    private ChildEventListener childEventListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,6 +68,7 @@ public class ChatActivity extends AppCompatActivity {
         setContentView(R.layout.activity_chat);
 
         messageReceiver = getIntent().getExtras().get("visit_user_name").toString();
+        setTitle(messageReceiver);
         messageSender = MyApplication.getInstance().getLoginUserName();
         dbRef = FirebaseDatabase.getInstance().getReference();
         initViews();
@@ -77,6 +82,7 @@ public class ChatActivity extends AppCompatActivity {
         messageInputText = (EditText) findViewById(R.id.input_message);
         userMessagesList = (RecyclerView) findViewById(R.id.private_messages_list_of_users);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+
         messageAdapter = new MessageAdapter(messagesList);
         userMessagesList.setLayoutManager(linearLayoutManager);
         userMessagesList.setAdapter(messageAdapter);
@@ -182,15 +188,28 @@ public class ChatActivity extends AppCompatActivity {
 
 
     @Override
-    protected void onStart() {
+    protected void onResume() {
         super.onStart();
+        Log.d(TAG, "onStart: " + messageSender + " , " + messageReceiver);
+        childEventListener = getListener();
+        dbRef.child("Messages").child(messageSender).child(messageReceiver).addChildEventListener(childEventListener);
+    }
 
-        dbRef.child("Messages").child(messageSender).child(messageReceiver).addChildEventListener(new ChildEventListener() {
+    @Override
+    protected void onPause() {
+        super.onPause();
+        dbRef.child("Messages").child(messageSender).child(messageReceiver).removeEventListener(childEventListener);
+        messagesList.clear();
+    }
+
+    @NonNull
+    private ChildEventListener getListener() {
+        return new ChildEventListener() {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-                Log.d(TAG, "onChildAdded: ");
-                Messages messages = dataSnapshot.getValue(Messages.class);
-                messagesList.add(messages);
+                Messages message = dataSnapshot.getValue(Messages.class);
+                Log.d(TAG, "onChildAdded: " + message.getMessageID());
+                messagesList.add(message);
                 messageAdapter.notifyDataSetChanged();
                 userMessagesList.smoothScrollToPosition(userMessagesList.getAdapter().getItemCount());
             }
@@ -214,7 +233,7 @@ public class ChatActivity extends AppCompatActivity {
             public void onCancelled(DatabaseError databaseError) {
 
             }
-        });
+        };
     }
 
     private void sendMessage() {

@@ -41,16 +41,6 @@ public class LoginActivity extends AppCompatActivity {
         initView();
         mFirebaseDb = FirebaseDatabase.getInstance();
         mDbUsersRef = mFirebaseDb.getReference("Users");
-
-        Button bt_1 = (Button) findViewById(R.id.button2);
-
-        bt_1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v){
-                startActivity(new Intent(LoginActivity.this, photo.class));
-            }
-        });
-
     }
 
     private void initView() {
