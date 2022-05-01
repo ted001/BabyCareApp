@@ -170,6 +170,7 @@ public class SignUpActivity extends AppCompatActivity {
                                     mDbFamilyCodeRef.child("1111").child("family").child(userName).setValue(user);
                                     //User user = new User(userName, babyName, relationship, babyBirthday);
                                     //Task t = mDbUsersRef.child(user.getUserName()).setValue(user);
+                                    MyApplication.getInstance().setLoginUserName(userName);
                                     startActivity(new Intent(SignUpActivity.this, MainActivity.class));
                                     SignUpActivity.this.finish();
                                     return;
