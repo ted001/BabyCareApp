@@ -2,7 +2,6 @@
 Lifesaver for busy new parents. Mobile assistant for loving families
 
 4/7 group meeting
-
 Result:
 Agreed on initial design. 
 Drew app design UML. 
