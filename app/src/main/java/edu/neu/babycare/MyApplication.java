@@ -7,6 +7,7 @@ public class MyApplication extends Application {
     private String loginUserName;
     private int score;
     private boolean[] videoCheckedList = new boolean[3];
+    private String babyName;
 
 
     public static MyApplication getInstance() {
@@ -42,6 +43,14 @@ public class MyApplication extends Application {
     public void setVideoCheckedList(boolean checked, int index) {
         if (index < 0 || index >=3) return;
         this.videoCheckedList[index] = checked;
+    }
+
+    public String getBabyName() {
+        return babyName;
+    }
+
+    public void setBabyName(String babyName) {
+        this.babyName = babyName;
     }
 
 }

@@ -208,7 +208,7 @@ public class SignUpActivity extends AppCompatActivity {
                                 "Unable to login, Please check the network connection", Toast.LENGTH_SHORT).show();
                     } else {
                         mDbFamilyCodeRef.child("1111").child("family").child(userName).setValue(user);
-                        mDbFamilyCodeRef.child("1111").child(babyName).setValue(baby);
+                        mDbFamilyCodeRef.child("1111").child("baby").child(babyName).setValue(baby);
                         MyApplication.getInstance().setLoginUserName(userName);
                         Intent intent = new Intent();
                         intent.setClass(SignUpActivity.this, MainActivity.class);

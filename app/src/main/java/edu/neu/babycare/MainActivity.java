@@ -5,26 +5,44 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.navigation.NavigationBarView;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
+import edu.neu.babycare.model.Baby;
+import edu.neu.babycare.model.User;
 import edu.neu.babycare.ui.family.FamilyActivity;
+import edu.neu.babycare.ui.login.LoginActivity;
 import edu.neu.babycare.ui.training.TrainingCenterActivity;
 
 public class MainActivity extends AppCompatActivity {
+    private static final String TAG = MainActivity.class.getSimpleName();
+
     NavigationBarView bottomNavigationView;
+    //firebaseDatabase
+    private FirebaseDatabase mFirebaseDb;
+    private DatabaseReference mDbBabyRef;
+    private TextView mBabyNameTv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        mFirebaseDb = FirebaseDatabase.getInstance();
+        mDbBabyRef = mFirebaseDb.getReference("FamilyCodes").child("1111").child("baby");
 
+        mBabyNameTv = findViewById(R.id.baby_name);
         //Initialize and assign variable
 //        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView = findViewById(R.id.bottom_navigation);
@@ -68,13 +86,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-//        ImageButton btnFeedingHistory = (ImageButton) findViewById(R.id.feeding_history);
-//        btnFeedingHistory.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                openActivityFeedingHistory();
-//            }
-//        });
+        ImageButton btnFeedingHistory = (ImageButton) findViewById(R.id.feeding_history);
+        btnFeedingHistory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openActivityFeedingHistory();
+            }
+        });
 
         ImageButton btnWeightNHeight = (ImageButton) findViewById(R.id.weight_length);
         btnWeightNHeight.setOnClickListener(new View.OnClickListener() {
@@ -116,6 +134,25 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        displayBabyName();
         bottomNavigationView.setSelectedItemId(R.id.home);
+    }
+
+    private void displayBabyName() {
+        mDbBabyRef.get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DataSnapshot> task) {
+                if (!task.isSuccessful()) {
+                    Log.e(TAG, "Error getting data", task.getException());
+                } else {
+                    DataSnapshot snapshot = task.getResult();
+                    for (DataSnapshot postSnapshot : snapshot.getChildren()) {
+                        String babyName = postSnapshot.getValue(Baby.class).babyName;
+                        mBabyNameTv.setText(babyName);
+                        Log.d(TAG, "onComplete: " + babyName);
+                    }
+                }
+            }
+        });
     }
 }
