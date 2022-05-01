@@ -1,4 +1,4 @@
-package com.example.babyfeed;
+package edu.neu.babycare;
 
 import android.content.Context;
 import android.content.DialogInterface;
