@@ -17,6 +17,6 @@ public class ImageDetail extends Activity {
         Log.e("detail", String.valueOf(images));
         ImageView imag = (ImageView) findViewById(R.id.details_img);
         imag.setImageResource(images);
-    } 
+    }
+    }
 
-}
