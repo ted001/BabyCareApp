@@ -68,5 +68,9 @@ b. reward system
 
 Links to the final demo: 
 Jin Zhiyi:  https://youtu.be/xNsI7rJ9lvE
+
 Yutong Shang: https://drive.google.com/file/d/1EIqkKUW9tvRYSHllefg5JIg9Q7svQBgP/view?usp=sharing
+
 Qiyang's part: https://youtu.be/773fgJJliiM
+
+Huixin Huang: https://www.youtube.com/watch?v=FCExuVruTXM
