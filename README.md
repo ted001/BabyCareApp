@@ -63,3 +63,9 @@ Result: Sync with TA
 2. Discuss some ideas about feature
 a. message center
 b. reward system
+
+
+
+Links to the final demo: 
+
+Qiyang's part: https://youtu.be/773fgJJliiM
