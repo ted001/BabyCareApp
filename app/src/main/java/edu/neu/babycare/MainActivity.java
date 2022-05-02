@@ -94,13 +94,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        ImageButton btnWeightNHeight = (ImageButton) findViewById(R.id.weight_length);
-        btnWeightNHeight.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openActivityWeightNHeight();
-            }
-        });
+//        ImageButton btnWeightNHeight = (ImageButton) findViewById(R.id.weight_length);
+//        btnWeightNHeight.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                openActivityWeightNHeight();
+//            }
+//        });
 
         ImageButton btnAlbum = (ImageButton) findViewById(R.id.photo_album);
         btnAlbum.setOnClickListener(new View.OnClickListener() {
