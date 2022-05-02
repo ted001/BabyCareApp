@@ -1,4 +1,7 @@
 # BabyCareApp
+
+
+Demo for this project, from Huixin Huang: https://www.youtube.com/watch?v=FCExuVruTXM
  
 # BabyCareApp
 Lifesaver for busy new parents. Mobile assistant for loving families
