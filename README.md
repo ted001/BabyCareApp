@@ -32,16 +32,22 @@ Login & signup ——@Jin zhiyi
 
 4/16 group meeting with TA 
 Home page  —— @qiyang
-a. Study google BottomNavigationView
+a. Study google BottomNavigationView 
+
 Album —— @yutong
 a. finalize on album design details. 
 b. Study how to read and store image
+
 Feeding tools and others——@huxing
 a. finalize on design details.
+
 Training Center —— @Jin zhiyi
 a. finalize on design details.
+
 Message Center —— TBD
+
 Login & signup ——@Jin zhiyi
+
 a. finalize on design details.
 
 Will meet again on 4.19 4:30 pm to sync status, Demonstrate and explain current code
