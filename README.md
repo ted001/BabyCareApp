@@ -1,5 +1,6 @@
  # BabyCareApp
 Lifesaver for busy new parents. Mobile assistant for loving families
+**Video demo links are at the bottom**
 
 4/7 group meeting
 
@@ -64,7 +65,13 @@ Result: Sync with TA
 a. message center
 b. reward system
 
-
+4/25 meeting with the group
+4/26 meeting with the group
+4/25 meeting with the group
+4/28 meeting with the group
+4/29 meeting with the group
+4/30 meeting with the group
+4/31 meeting with the group
 
 Links to the final demo: 
 Jin Zhiyi:  https://youtu.be/xNsI7rJ9lvE
